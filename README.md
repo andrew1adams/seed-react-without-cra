@@ -12,6 +12,7 @@
 
 Você vai precisar de algumas **ferramentas** para seguir o restante do documento:
 
+- node v16.13.2
 - npm **ou** yarn (gerenciador de pacotes);
 - git;
 - VSCode ou qualquer outra IDE de sua preferência;
@@ -101,7 +102,7 @@ npm install react-dom
 A próxima dependência necessária a instalar é o `babel`, como dependência de desenvolvimento, o que determina que essas dependências **não** serão utilizadas em ambiente de produção, esse conjunto de dependências são responsáveis por compilar o código com o intuito de fazer com que os `browsers` o entendam. Em suma eles transformam todo o código para `javascript` básico, então vamos lá:
 
 ```bash
-npm install @babel/core @babel/cli @babel/preset-env @babel/preset-react babel-loader -D
+npm install @babel/core @babel/cli @babel/preset-env @babel/preset-react @babel/preset-typescript babel-loader -D
 ```
 
 Seguindo com as configurações, a próxima dependência a ser instalada é o `webpack`, que em conjunto com o `babel` complementa o _bundle_ do projeto aumentando a quantidade de extensões a serem compiladas. Abaixo, instale como dependência de desenvolvimento:
@@ -173,7 +174,7 @@ A próxima dependência a ser configurada é o `webpack` que na grande maioria d
 const path = require('path');
 
 // _Plugin_ responsável por inserir o arquivo `bundle.js` para o nosso `index.html`.
-const HtmlWebpackPlugin = require('htmp-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Este _plugin_ é responsável por preservar os dados dos estados de nossa aplicação evitando que haja perda dessas informações durante o desenvolvimento, em fluxos pequenos da aplicação é um impacto quase imperceptível, porém caso haja um fluxo muito grande no decorrer da aplicação ele será de grande valia.
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
@@ -331,6 +332,7 @@ E por fim, mas não menos importante, configure os arquivos a serem ignorados ao
 
 ## Configurações de ambientes
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -413,7 +415,7 @@ E seja feliz.
 
 <br />
 
-> Esta documentação, e no momento em que foi desenvolvido, as informações coletadas são funcionais, busque referências mais atuais de acordo com o contexto no qual você está inserido. Agradeço quem tenha lido até aqui.
+> Esta documentação, no momento em que foi desenvolvida, as informações coletadas são funcionais, busque referências mais atuais de acordo com o contexto no qual você está inserido. Agradeço quem tenha lido até aqui.
 
 ##### Grato, Andrew Adams.
 
