@@ -149,22 +149,22 @@ npm install @types/react @types/react-dom -D
 
 <br/>
 
-A primeira dependência que a configurar é o `babel` então, na pasta raiz, crie o arquivo `babel.config.js` e dentro dele cole a seguinte configuração:
+A primeira dependência que a configurar é o `babel` então, na pasta raiz, crie o arquivo `.babelrc` e dentro dele cole a seguinte configuração:
 
-```javascript
-module.exports = {
+```json
+{
   // `presets` é uma propriedade que determina quais presets ou configurações de ambientes do babel estão sendo utilizados dentro da aplicação.
-  presets: [
-    '@babel/preset-env',
-    '@babel/preset-typescript',
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-typescript",
     [
-      '@babel/preset-react',
+      "@babel/preset-react",
       {
-        runtime: 'automatic',
-      },
-    ],
-  ],
-};
+        "runtime": "automatic"
+      }
+    ]
+  ]
+}
 ```
 
 A próxima dependência a ser configurada é o `webpack` que na grande maioria das vezes é utilizada junto com o `babel`, então, crie na pasta raiz o arquivo `webpack.config.js` e cole as seguintes configurações:

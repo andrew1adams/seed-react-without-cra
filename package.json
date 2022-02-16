@@ -1,19 +1,19 @@
 {
-  "name": "vallori-challenge",
+  "name": "seed-react-without-cra",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrew1adams/vallori-challenge.git"
+    "url": "git+https://github.com/andrew1adams/seed-react-without-cra.git"
   },
-  "keywords": [],
+  "keywords": ["project", "without", "cra", "reactjs", "javascript"],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andrew1adams/vallori-challenge/issues"
+    "url": "https://github.com/andrew1adams/seed-react-without-cra/issues"
   },
-  "homepage": "https://github.com/andrew1adams/vallori-challenge#readme",
+  "homepage": "https://github.com/andrew1adams/seed-react-without-cra#readme",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve",
     "build": "cross-env NODE_ENV=production webpack"
